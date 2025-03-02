@@ -1,6 +1,6 @@
 from cryptography.fernet import Fernet
 
-def load_key():
+def load_key(): #load the generated key
     with open("keyForPass.key.txt",'rb') as r:
         return r.read()
 
@@ -14,7 +14,7 @@ def dec(file_name):
         w.write(dec)
 
 
-file_name="My All passwords.txt.txt"
+file_name="My All passwords.txt.txt" #file to be decrypted
 dec(file_name)
 with open(file_name,"rb") as r:
     x=r.read()
